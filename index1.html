@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hi Love 💖</title>
+  <style>
+    :root {
+      --primary-color: #ff3399;
+      --secondary-color: #ff66b2;
+      --background-gradient: linear-gradient(135deg, #ffe6f0, #ffe6fa, #f9f0ff);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background-gradient);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 2rem;
+      color: var(--secondary-color);
+      animation: beat 1s infinite;
+      margin-top: 20px;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .reveal-btn {
+      background-color: var(--secondary-color);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .reveal-btn:hover {
+      background-color: #ff3380;
+    }
+
+    #hidden-message {
+      display: none;
+      opacity: 0;
+      margin-top: 30px;
+      transition: opacity 1s ease;
+    }
+
+    #hidden-message.show {
+      display: block;
+      opacity: 1;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 480px) {
+      body {
+        padding: 30px 15px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .heart {
+        font-size: 1.5rem;
+      }
+
+      .reveal-btn {
+        font-size: 0.95rem;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi Love 💖</h1>
+
+  <p>Hello love, I know you're tired from everything — going to school, quizzes, and going home. Dati lagi tayong magkasabay umuwi but now hindi na. And that makes the byahe din so tiring kasi wala kang kasabay.</p>
+
+  <p>I just created this to somehow make you feel light hehe 😌</p>
+
+  <p>Love, I'm so proud of you. Yung quiz mo? That score is already high love — grabe, you're doing well love, alam mo 'yun? 😭💘</p>
+
+  <p>KEEP IT UP LOVE!! 💪 Make our *anniv* your motivation para mairaos ang prelims hehe 😚</p>
+
+  <p>I miss you love and I love you so much!!</p>
+
+  <p>— From your loving bf, <strong>ck ❤️</strong></p>
+
+  <div class="heart">❤️</div>
+
+  <!-- Reveal Button -->
+  <button class="reveal-btn" onclick="showHiddenMessage()">Tap to reveal something 💌</button>
+
+  <!-- Hidden Message -->
+  <div id="hidden-message">
+    <p><em>P.S. I’m always here for you, kahit pagod ka na, kahit down ka — I’ll be cheering for you quietly or loudly (whichever you need 😘). We got this love. Prelims lang ‘yan. Let’s celebrate after 💑</em></p>
+  </div>
+
+  <footer>
+    This page was made with love by CK 💌
+  </footer>
+
+  <script>
+    function showHiddenMessage() {
+      const msg = document.getElementById('hidden-message');
+      msg.classList.add('show');
+    }
+  </script>
+</body>
+</html>
